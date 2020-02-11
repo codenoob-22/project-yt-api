@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'youtub_api',
+    'core',
+    'oauth2client.contrib.django_util',
 ]
 
 MIDDLEWARE = [
@@ -121,8 +122,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 #paths....................................................... 
-STATIC_URL  = '/static/'
-MEDIA_URL   = '/media/'
-STATIC_ROOT = os.path.join(BASE_DIR,'static')
-MEDIA_ROOT  = os.path.join(BASE_DIR, 'media')
+STATIC_URL = '/static/'
+MEDIA_URL = '/media/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 #........................................................
+
+#Top Secret.............................................
+GOOGLE_OAUTH2_CLIENT_ID = '#######'
+GOOGLE_OAUTH2_CLIENT_SECRET = '######'
+#.......................................................
